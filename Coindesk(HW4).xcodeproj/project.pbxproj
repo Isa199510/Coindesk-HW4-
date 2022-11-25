@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		F4A06510292FE2BE00D67A2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A0650F292FE2BE00D67A2A /* AppDelegate.swift */; };
 		F4A06512292FE2BE00D67A2A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06511292FE2BE00D67A2A /* SceneDelegate.swift */; };
-		F4A06514292FE2BE00D67A2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06513292FE2BE00D67A2A /* ViewController.swift */; };
+		F4A06514292FE2BE00D67A2A /* CoindeskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06513292FE2BE00D67A2A /* CoindeskViewController.swift */; };
 		F4A06517292FE2BE00D67A2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A06515292FE2BE00D67A2A /* Main.storyboard */; };
 		F4A06519292FE2C000D67A2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4A06518292FE2C000D67A2A /* Assets.xcassets */; };
 		F4A0651C292FE2C000D67A2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4A0651A292FE2C000D67A2A /* LaunchScreen.storyboard */; };
+		F4A06528292FE30A00D67A2A /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A06527292FE30A00D67A2A /* Link.swift */; };
+		F4A0652B292FE33700D67A2A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4A0652A292FE33700D67A2A /* Network.swift */; };
+		F4A0652E2930574E00D67A2A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4A0652D2930574E00D67A2A /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F4A0650C292FE2BE00D67A2A /* Coindesk(HW4).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coindesk(HW4).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4A0650F292FE2BE00D67A2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4A06511292FE2BE00D67A2A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F4A06513292FE2BE00D67A2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F4A06513292FE2BE00D67A2A /* CoindeskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoindeskViewController.swift; sourceTree = "<group>"; };
 		F4A06516292FE2BE00D67A2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4A06518292FE2C000D67A2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4A0651B292FE2C000D67A2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4A0651D292FE2C000D67A2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4A06527292FE30A00D67A2A /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		F4A0652A292FE33700D67A2A /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4A0652E2930574E00D67A2A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,57 @@
 		F4A0650E292FE2BE00D67A2A /* Coindesk(HW4) */ = {
 			isa = PBXGroup;
 			children = (
-				F4A0650F292FE2BE00D67A2A /* AppDelegate.swift */,
-				F4A06511292FE2BE00D67A2A /* SceneDelegate.swift */,
-				F4A06513292FE2BE00D67A2A /* ViewController.swift */,
-				F4A06515292FE2BE00D67A2A /* Main.storyboard */,
+				F4A06529292FE32700D67A2A /* Network */,
+				F4A06526292FE2F700D67A2A /* Models */,
+				F4A06525292FE2E600D67A2A /* SupportFiles */,
+				F4A06524292FE2DC00D67A2A /* ViewControllers */,
+				F4A06523292FE2D300D67A2A /* Storyboards */,
 				F4A06518292FE2C000D67A2A /* Assets.xcassets */,
-				F4A0651A292FE2C000D67A2A /* LaunchScreen.storyboard */,
 				F4A0651D292FE2C000D67A2A /* Info.plist */,
 			);
 			path = "Coindesk(HW4)";
+			sourceTree = "<group>";
+		};
+		F4A06523292FE2D300D67A2A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F4A06515292FE2BE00D67A2A /* Main.storyboard */,
+				F4A0651A292FE2C000D67A2A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F4A06524292FE2DC00D67A2A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F4A06513292FE2BE00D67A2A /* CoindeskViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F4A06525292FE2E600D67A2A /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				F4A0650F292FE2BE00D67A2A /* AppDelegate.swift */,
+				F4A06511292FE2BE00D67A2A /* SceneDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		F4A06526292FE2F700D67A2A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F4A06527292FE30A00D67A2A /* Link.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F4A06529292FE32700D67A2A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F4A0652A292FE33700D67A2A /* Network.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +131,9 @@
 			dependencies = (
 			);
 			name = "Coindesk(HW4)";
+			packageProductDependencies = (
+				F4A0652D2930574E00D67A2A /* Alamofire */,
+			);
 			productName = "Coindesk(HW4)";
 			productReference = F4A0650C292FE2BE00D67A2A /* Coindesk(HW4).app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +162,9 @@
 				Base,
 			);
 			mainGroup = F4A06503292FE2BE00D67A2A;
+			packageReferences = (
+				F4A0652C2930574D00D67A2A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = F4A0650D292FE2BE00D67A2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +192,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4A06514292FE2BE00D67A2A /* ViewController.swift in Sources */,
+				F4A0652B292FE33700D67A2A /* Network.swift in Sources */,
+				F4A06514292FE2BE00D67A2A /* CoindeskViewController.swift in Sources */,
 				F4A06510292FE2BE00D67A2A /* AppDelegate.swift in Sources */,
 				F4A06512292FE2BE00D67A2A /* SceneDelegate.swift in Sources */,
+				F4A06528292FE30A00D67A2A /* Link.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +414,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F4A0652C2930574D00D67A2A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F4A0652D2930574E00D67A2A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4A0652C2930574D00D67A2A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F4A06504292FE2BE00D67A2A /* Project object */;
 }
